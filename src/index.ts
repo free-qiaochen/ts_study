@@ -1,28 +1,7 @@
-// TS中冒号后面的都为类型标识
-// 1.基础类型
-// : number string boolean
-let num1: number = 1
-let str: string = 'zf'
-let bool: boolean = true
-
-// ??? Number
-
-const arr1: number[] = []
-const arr2: (number | string)[] = ['a', 1] // 并集的含义
-// 如果数组里放的内容 就是无规律的, 有规律的数组
-const arr3: any[] = ['', 1, {}]
-const arr4: Array<boolean> = [true, false]
-
-arr1.push(1)
-// arr1.push('1') //error
-console.log(num1, arr1)
-
-// 元组
-let tuple: [string, number, boolean] = ['a', 1, false]
-console.log(tuple[1])
-tuple.push('11')
-// tuple[2] = 1 error
-console.log(tuple)  // ["a", 1, false, "11"]
-
-// 枚举
-
+// 声明变量以及赋值会默认进行类型推导，（声明变量赋值时 以赋值类型为准）
+// 联合类型
+let numOrStr:string | number
+// 默认联合类型 在没有确定类型之前 只能调用两个类型共同的方法
+// 在变量确定类型后 可以设置对应的方法
+numOrStr = 1
+numOrStr

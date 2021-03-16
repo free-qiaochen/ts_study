@@ -23,7 +23,7 @@ export default {
       tsconfig: path.resolve(__dirname, 'tsconfig.json')
     }),
     serve({
-      port: 3000,
+      port: 666,
       contentBase: '',
       openPage: '/public/index.html',
       open: true
